@@ -14,9 +14,11 @@ class ComponentHolder extends Component {
         super(props);
 
         this.state = {
-            selectedCategory: 'Choose Category',
-            imgOne: [default_quote],
-            // imgUrl: [lagbaja, fawzy, lade] 
+            selectedCategory: ['Choose Category'],
+            imgOne: default_quote,
+            isLoading: true,
+            // person: null
+            character: []
         }
         this.changeQuote = this.changeQuote;
     }
@@ -25,40 +27,67 @@ class ComponentHolder extends Component {
         this.setState({selectedCategory: event.target.value});
     }
 
-    // changeImg = () => {
-       
-    // }
-
     changeQuote = () => {
         
-        const imgUrl = [lagbaja, fawzy, lade]
+        const imgUrl = [default_quote, lagbaja, fawzy, lade];
         const {selectedCategory, imgOne} = this.state;  
-        // this.newSelection();
         
         for(let i = 0; i < imgUrl.length; i++){
-            imgOne.push(imgUrl[i]);
-            if (this.state.selectedCategory == 'Choose Category' && i == 0) {
-                this.setState({selectedCategory:selectedCategory, imgOne:imgOne[0]});
+            if (selectedCategory !== 'Choose Category' && i !== 0){
+                switch (selectedCategory) {
+                    case 'islamic':
+                        this.setState({selectedCategory:selectedCategory, imgOne:imgUrl[1]});
+                        break;
+                    case 'motivational':
+                        this.setState({selectedCategory:selectedCategory, imgOne:imgUrl[2]});
+                    break;
+                    default:
+                        this.setState({selectedCategory:selectedCategory, imgOne:imgUrl[3]});
+                    break;
+                }
             }
             else {
-                this.setState({selectedCategory:selectedCategory, imgOne:imgOne[0]});
+                this.setState({selectedCategory:selectedCategory, imgOne:imgUrl[0]});
             }
         }
 
     }
 
-    // componentDidMount(){
-    //     setTimeout( () => this.changeQuote, 1000);
-    // }
+    componentDidMount(){
+        // this.setState({isLoading: true});
+        // "https://swapi.co/api/people/1"
+        fetch("https://healthruwords.p.rapidapi.com/v1/quotes/", {
+            "method": "GET",
+            "headers": {
+                "x-rapidapi-host": "healthruwords.p.rapidapi.com",
+                "x-rapidapi-key": "2673355a8amsh6c0f7c17967bc54p19e076jsn968a3cc59c95"
+            }
+        })
+        .then(response => response.json())
+        .then(data => this.setState({isLoading: false, character:data[0]}));
+            // .then(results => results.json())
+            // .then(data => this.setState({isLoading: false, character: data}));
+    }
 
     render(){
-       
+    //    const text = this.state.isLoading ? 'Loading...' : this.state.person.name.first;
         return(
-            <Fragment>
-                <CurrentDay />
-                <FormComponent changeQuote={this.changeQuote} newSelection={this.newSelection} selectedCategory={this.state.selectedCategory}/>
-                <ImagesComponent imgOne={this.state.imgOne}  selectedCategory={this.state.selectedCategory} />
-            </Fragment>
+            <div>
+                <Fragment>
+                    <CurrentDay />
+                    <FormComponent changeQuote={this.changeQuote} newSelection={this.newSelection} selectedCategory={this.state.selectedCategory}/>
+                    <ImagesComponent imgOne={this.state.imgOne}  selectedCategory={this.state.selectedCategory} />
+                </Fragment>
+                <div id="api_div">  
+                     {this.state.isLoading ? 'Loading...' : 
+                        <div>  {this.state.character.title}
+                            <img src={this.state.character.media} />
+                            {/* <div> {this.state.person.name.first} </div> */}
+                            {/* <img src={this.state.person.picture.large} /> */}
+                        </div> 
+                     }
+                </div>
+            </div>
         );
     }
 }

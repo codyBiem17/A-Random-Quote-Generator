@@ -1,0 +1,115 @@
+
+  // changeCategory(event) {
+    //     const {selectedCategory} = this.state;
+    // //     // selectedCategory: event.target.value == 'Choose category';
+    // //     if(selectedCategory ){
+
+    // //     }
+    //     this.setState({selectedCategory: event.target.value});
+    //   }
+// const {selectedCategory, imgUrl} = this.state;
+        // let randomQuotes = Math.random();
+        // return randomQuotes;
+    // }
+        
+        
+        // let randomNum =  selectedCategory.length;
+        // for (let i = 0; i < randomNum; i++) {
+        //     if (selectedCategory[i] == 'Choose Category' && i == 0) {
+                // imgUrl.unshift(this.state.imgOne);
+                // const {selectedCategory, imgUrl} = this.props;
+            //     let randomNum = Math.floor(Math.random() * imgUrl.length);
+            //     let randomQuotes = Math.floor(Math.random() * selectedCategory.length)
+            //     if(selectedCategory[0] == 'Choose Category') {
+            //         alert('fgddf')
+            //         // [imgUrl].unshift(this.state.imgOne);
+            //         // [selectedCategory].unshift(this.state.defaultQuote);
+            //     }
+            //     // alert (randomNum)
+            // // }
+            // else {
+            //     // const {selectedCategory} = this.state;
+            //     // selectedCategory.push(category);
+            //     // [imgUrl].unshift(this.state.imgOne);
+            //     // [selectedCategory].unshift(this.state.defaultQuote);
+            //     // this.setState({selectedCategory: selectedCategory[randomQuotes], imgUrl: imgUrl[randomNum]}); 
+            //     alert('dsf')
+            // }
+                // this.setState({selectedCategory: selectedCategory, imgUrl: imgUrl}); 
+        //     }
+        //     else{
+        //         // const {selectedCategory} = this.state;
+        //         // selectedCategory.push(category);
+        //         this.setState({selectedCategory: selectedCategory, imgUrl: imgUrl[i]});
+        //     }
+            
+        // }
+        
+        // const sel = this.newSelection()
+        // const {selectedCategory, imgUrl} = this.state;
+        // let randomNum = Math.floor(Math.random() * selection.length);
+        // if(selectedCategory !== 'Choose Category'){
+            // this.setState({selectedCategory: this.newSelection, imgUrl: imgUrl});
+            // alert(selection.length);
+        // }
+        // alert('hhg');
+
+
+        const {selectedCategory, imgUrl} = this.props;
+        let randomNum = Math.floor(Math.random() * imgUrl.length);
+        let randomQuotes = Math.floor(Math.random() * selectedCategory.length)
+    //     // for (let quotes = 0; quotes < selectedCategory.length; quotes++) {
+    //     //     for (let images = 0; images < imgUrl.length; images++) {
+    //             // if (randomNum == 0){
+                    if(randomQuotes == 0 && randomNum == '0') {
+                        return imgUrl[randomNum]; 
+                    }
+    //                 // alert (randomNum)
+    //             // }
+                else if (randomQuotes !== 0 && randomNum !== '0') {
+    //                 // const {selectedCategory} = this.state;
+    //                 // selectedCategory.push(category);
+                    return imgUrl[randomNum]; 
+    //                 // alert(randomNum)
+                }
+        //     }
+
+
+        
+    //     // const {selectedCategory} = this.props;
+    //     // let randomNum = Math.floor(Math.random() * selectedCategory.length);
+    //     // for(let i = 0; i < imgUrl.length; i++){
+    //     //     if(i == 0){
+    //         // if (selectedCategory[0] == 'Choose Category') {
+    //         //     alert(selectedCategory);
+    //         // }
+    //             // if(randomNum !== '0'){
+    //             //     return imgUrl[randomNum];
+    //             // }
+    //             // alert(randomNum);
+    //     //     }
+    //     //     else if(i !== 0) {
+    //     //         return imgUrl[i];
+    //     //     }
+    //     // }
+        
+    // }
+
+
+     // const {selectedCategory, imgOne, imgUrl } = this.props;
+        // let randomNum = Math.floor(Math.random() * imgUrl.length);
+        // let randomQuotes = Math.floor(Math.random() * selectedCategory.length)
+        // const { imgOne } = this.props;
+        // const {imgUrl } = this.props;
+        // // const {selectedCategory} = this.props;
+        // let randomNum = Math.floor(Math.random() * imgUrl.length);
+        // if(randomNum !== 0 && this.state.selectedCategory !== 'Choose Category'){
+            // this.setState({imgUrl: imgUrl[randomNum]});
+            // alert(randomNum);
+        // }
+        // selectedCategory =='Choose Category' && randomNum == 0 ? imgUrl[0] : imgUrl[randomNum]
+        // let randomNum = Math.floor(Math.random() * imgUrl.length);
+        
+        {/* <img className="imgQuotes" 
+        src={`${process.env.PUBLIC_URL}/assets/images/default_quote.png`} 
+        alt="logo"/> */}
