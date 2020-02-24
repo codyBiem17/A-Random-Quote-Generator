@@ -1,27 +1,24 @@
 {
   "files": {
-    "main.css": "/A-Random-Quote-Generator/static/css/main.c93ee74e.chunk.css",
-    "main.js": "/A-Random-Quote-Generator/static/js/main.712290fd.chunk.js",
-    "main.js.map": "/A-Random-Quote-Generator/static/js/main.712290fd.chunk.js.map",
+    "main.css": "/A-Random-Quote-Generator/static/css/main.a20b5b28.chunk.css",
+    "main.js": "/A-Random-Quote-Generator/static/js/main.c46d8b60.chunk.js",
+    "main.js.map": "/A-Random-Quote-Generator/static/js/main.c46d8b60.chunk.js.map",
     "runtime-main.js": "/A-Random-Quote-Generator/static/js/runtime-main.7f40c82a.js",
     "runtime-main.js.map": "/A-Random-Quote-Generator/static/js/runtime-main.7f40c82a.js.map",
-    "static/js/2.bcdb7025.chunk.js": "/A-Random-Quote-Generator/static/js/2.bcdb7025.chunk.js",
-    "static/js/2.bcdb7025.chunk.js.map": "/A-Random-Quote-Generator/static/js/2.bcdb7025.chunk.js.map",
+    "static/js/2.65acad86.chunk.js": "/A-Random-Quote-Generator/static/js/2.65acad86.chunk.js",
+    "static/js/2.65acad86.chunk.js.map": "/A-Random-Quote-Generator/static/js/2.65acad86.chunk.js.map",
     "index.html": "/A-Random-Quote-Generator/index.html",
-    "precache-manifest.e67042de0b8738f735edd9008742635d.js": "/A-Random-Quote-Generator/precache-manifest.e67042de0b8738f735edd9008742635d.js",
+    "precache-manifest.46304575c7cbb44ada0736c5a2b757bc.js": "/A-Random-Quote-Generator/precache-manifest.46304575c7cbb44ada0736c5a2b757bc.js",
     "service-worker.js": "/A-Random-Quote-Generator/service-worker.js",
-    "static/css/main.c93ee74e.chunk.css.map": "/A-Random-Quote-Generator/static/css/main.c93ee74e.chunk.css.map",
-    "static/js/2.bcdb7025.chunk.js.LICENSE": "/A-Random-Quote-Generator/static/js/2.bcdb7025.chunk.js.LICENSE",
+    "static/css/main.a20b5b28.chunk.css.map": "/A-Random-Quote-Generator/static/css/main.a20b5b28.chunk.css.map",
+    "static/js/2.65acad86.chunk.js.LICENSE": "/A-Random-Quote-Generator/static/js/2.65acad86.chunk.js.LICENSE",
     "static/media/custom.css": "/A-Random-Quote-Generator/static/media/bgimage.5b6c85f2.jpg",
-    "static/media/default_quote4.jpg": "/A-Random-Quote-Generator/static/media/default_quote4.8d3ac6ee.jpg",
-    "static/media/fawzy.jpg": "/A-Random-Quote-Generator/static/media/fawzy.4456f9dc.jpg",
-    "static/media/lade.jpg": "/A-Random-Quote-Generator/static/media/lade.fc589a4d.jpg",
-    "static/media/lagbaja.jpg": "/A-Random-Quote-Generator/static/media/lagbaja.3c10386c.jpg"
+    "static/media/default_quote4.jpg": "/A-Random-Quote-Generator/static/media/default_quote4.8d3ac6ee.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.7f40c82a.js",
-    "static/js/2.bcdb7025.chunk.js",
-    "static/css/main.c93ee74e.chunk.css",
-    "static/js/main.712290fd.chunk.js"
+    "static/js/2.65acad86.chunk.js",
+    "static/css/main.a20b5b28.chunk.css",
+    "static/js/main.c46d8b60.chunk.js"
   ]
 }
